@@ -12,6 +12,7 @@ public class Main {
         int alen = a.length();
         int blen = b.length();
         if(alen == blen) System.out.print("same");
-        else System.out.print("Coding " + Math.max(alen, blen));
+        else if(alen > blen) System.out.print(a + " " + alen);
+        else System.out.print(b + " " + blen);
     }
 }
