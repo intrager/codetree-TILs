@@ -9,6 +9,8 @@ public class Main {
         int B = br.readLine().length();
         int C = br.readLine().length();
 
-        System.out.print(Math.min(A, Math.min(B, C)));
+        int min = Math.min(A, Math.min(B, C));
+        int max = Math.max(A, Math.max(B, C));
+        System.out.print(max-min);
     }
 }
