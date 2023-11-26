@@ -10,9 +10,7 @@ public class Main {
 
         while(n-- > 0) {
             String str = br.readLine();
-            for(char ch : str.toCharArray()) {
-                if(ch == 'a') countedA++;
-            }
+            if(str.startsWith('a')) countedA++;
             stringLength += str.length();
         }
         System.out.print(stringLength + " " + countedA);
