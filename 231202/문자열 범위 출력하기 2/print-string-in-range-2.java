@@ -9,7 +9,7 @@ public class Main {
         int n = Integer.parseInt(br.readLine());
 
         for(int i = 0; i < n; i++) {
-            System.out.print(str.charAt(str.length() - 1 - i));
+            System.out.print((char))tr.charAt(str.length() - 1 - i));
         }
     }
 }
