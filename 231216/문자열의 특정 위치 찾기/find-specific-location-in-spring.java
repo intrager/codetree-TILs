@@ -6,6 +6,11 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String[] arr = br.readLine().split(" ");
-        System.out.print(arr[0].indexOf(arr[1]));
+        int index = arr[0].indexOf(arr[1]);
+        if(index == -1) {
+            System.out.print("No");
+        } else {
+            System.out.print(index);
+        }
     }
 }
