@@ -9,10 +9,10 @@ public class Main {
         StringBuffer sb = new StringBuffer();
 
         for(int i = 0; i < chArr.length; i++) {
-            if(chArr[i] > 97 && chArr[i] < 122) {
+            if(chArr[i] > 96 && chArr[i] < 123) {
                 char ch = (char)(chArr[i] - 'a' + 'A');
                 sb.append(ch);
-            } else if(chArr[i] > 65 && chArr[i] < 90) {
+            } else if(chArr[i] > 64 && chArr[i] < 91) {
                 sb.append(chArr[i]);
             }
         }
