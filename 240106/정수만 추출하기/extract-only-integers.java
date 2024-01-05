@@ -11,12 +11,10 @@ public class Main {
             StringBuffer sb = new StringBuffer();
             for(int j = 0; j < arr[i].length(); j++) {
                 char ch = arr[i].charAt(j);
-                if(ch < 48 || ch > 57) {
-                    answer += Integer.parseInt(sb.toString());
-                    break;
-                }
+                if(ch < 48 || ch > 57) break;
                 sb.append(ch);
             }
+            answer += Integer.parseInt(sb.toString());
         }
         System.out.print(answer);
     }
