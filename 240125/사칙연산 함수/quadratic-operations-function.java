@@ -11,7 +11,11 @@ public class Main {
         int c = Integer.parseInt(arr[2]);
     
         String answer = calculate(a, o, c);
-        System.out.print(a + " " + o + " " + c + " = " + answer);
+        if(answer.equals("False")) {
+            System.out.print("False");
+        } else {
+           System.out.print(a + " " + o + " " + c + " = " + answer);
+        }
     }
 
     private static String calculate(int a, String o, int c) {
