@@ -32,7 +32,7 @@ public class Main {
     }
 
     private static boolean isConsecutiveNumberSubSequence(int[] A, int[] B, int n1, int n2) {
-        for(int i = 0; i < n1 - n2; i++) {
+        for(int i = 0; i < n1 - n2 + 1; i++) {
             for(int j = 0; j < n2 - 1; j++) {
                 if(B[j] == A[j + i] && B[j + 1] == A[j + 1 + i]) {
                     return true;
