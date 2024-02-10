@@ -29,7 +29,7 @@ public class Main {
 
     private static void alphabetCounting(String str, int[] arr) {
         for(int i = 0; i < str.length(); i++) {
-            arr[str.charAt(i) - 96]++;
+            arr[str.charAt(i) - 97]++;
         }
     }
 }
