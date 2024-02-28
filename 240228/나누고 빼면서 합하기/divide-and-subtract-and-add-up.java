@@ -2,6 +2,11 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
+    public static final int MAX_N = 100;
+
+    public static int[] A = new int[MAX_N + 1];
+    public static int cnt;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -9,26 +14,25 @@ public class Main {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
     
-        int[] A = new int[n];
         st = new StringTokenizer(br.readLine(), " ");
         
-        for(int i = 0; i < n; i++) { 
+        for(int i = 1; i <= n; i++) { 
             A[i] = Integer.parseInt(st.nextToken());
         }
 
-        int answer = plusElement(A, m);
-        System.out.print(answer);
+        cnt = m;
+        System.out.print(plusElement());
     }
 
-    private static int plusElement(int[] A, int m) {
+    private static int plusElement() {
         int elementSum = 0;
-        while(m >= 1) {
-            elementSum += A[m-1];
+        while(cnt >= 1) {
+            elementSum += A[cnt];
 
-            if(m % 2 == 1) {
-                m -= 1;
+            if(cnt % 2 == 1) {
+                cnt -= 1;
             } else {
-                m /= 2;
+                cnt /= 2;
             }
         }
 
