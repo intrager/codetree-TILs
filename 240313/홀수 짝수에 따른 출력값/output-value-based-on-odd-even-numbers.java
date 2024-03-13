@@ -13,10 +13,6 @@ public class Main {
     private static int calculateBasedEvenOrOdd(int n) {
         if(n <= 2)
             return n;
-        if(n % 2 == 0) {
-            return calculateBasedEvenOrOdd(n - 2) + n;
-        } else {
-            return calculateBasedEvenOrOdd(n - 2) + n;
-        }
+        return calculateBasedEvenOrOdd(n - 2) + n;
     }
 }
