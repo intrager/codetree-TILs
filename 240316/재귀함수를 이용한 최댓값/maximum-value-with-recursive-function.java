@@ -2,24 +2,26 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
+    private static final int MAX_N = 100;
+
+    private static int[] arr = new int[MAX_N];
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
-        String[] arr = br.readLine().split(" ");
-        int[] intArr = new int[arr.length];
-        
-        for(int i = 0; i < arr.length; i++) {
-            intArr[i] = Integer.parseInt(arr[i]);
+        String[] strArr = br.readLine().split(" ");
+
+        for(int i = 0; i < strArr.length; i++) {
+            arr[i] = Integer.parseInt(strArr[i]);
         }
 
-        System.out.print(getMax(intArr, 0, intArr[0]));
+        System.out.print(getMax(n - 1));
     }
 
-    private static int getMax(int[] arr, int count, int max) {
-        if(count == arr.length - 1)
-            return max;
-        count++;
-        return getMax(arr, count, Math.max(arr[count], max));
+    private static int getMax(int num) {
+        if(num == 0)
+            return arr[0];
+        return Math.max(getMax(num - 1), arr[num]);
     }
 }
