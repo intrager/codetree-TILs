@@ -10,16 +10,21 @@ public class Main {
         String[] a = br.readLine().toLowerCase().split("");
         String[] b = br.readLine().toLowerCase().split("");
 
+        if(a.length != b.length) {
+            System.out.print("No");
+            return ;
+        }
+
         Arrays.sort(a);
         Arrays.sort(b);
 
         String answer = "Yes";
-        if(a.length != b.length) {
-            answer = "No";
-            System.out.print(answer);
-            return ;
-        }
         for(int i = 0; i < a.length; i++) {
+            if(!a[i].equals(b[i])) {
+                answer = "No";
+            }
+        }
+        for(int i = 0; i < b.length; i++) {
             if(!a[i].equals(b[i])) {
                 answer = "No";
             }
