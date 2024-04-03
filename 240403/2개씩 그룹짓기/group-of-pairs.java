@@ -8,19 +8,18 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
-        int[] arr = new int[n * 2];
+        int[] arr = new int[n*2];
     
         String[] str = br.readLine().split(" ");
-        Arrays.sort(str);
 
-        for(int i = 0; i < n; i++) {
-            arr[i] = Integer.parseInt(str[i]);
-            arr[n + i] = Integer.parseInt(str[n + i]);   
+        for(int i = 0; i < n * 2; i++) {
+            arr[i] = Integer.parseInt(str[i]);   
         }
+        Arrays.sort(arr, 0, 2 * n);
 
         int answer = 0;
         for(int i = 0; i < n; i++) {
-            answer = Math.max(answer, arr[i] + arr[n * 2 - i - 1]);
+            answer = Math.max(answer, arr[i] + arr[n*2 - i - 1]);
         }
         System.out.print(answer);
     }
