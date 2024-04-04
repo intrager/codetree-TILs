@@ -19,7 +19,7 @@ public class Main {
 
         for(int i = 0; i < n; i++) {
             String str = br.readLine();
-            if(str.contains(T)) {
+            if(str.startsWith(T)) {
                 list.add(str);
             }
         }
