@@ -18,7 +18,7 @@ public class Main {
             list.add(arr[i]);
             if((i+1) % 2 == 1) {
                 Collections.sort(list);
-                System.out.print(list.get(i-1) + " ");
+                System.out.print(list.get(i-2) + " ");
             }
         }
     }
