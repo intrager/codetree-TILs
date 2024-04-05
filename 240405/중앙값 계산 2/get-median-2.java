@@ -15,7 +15,7 @@ public class Main {
         List<String> list = new ArrayList<>();
         
         for(int i = 1; i <= n; i+=2) {
-            list.add(arr[i]);
+            list.add(arr[i-1]);
             if(i % 2 == 1) {
                 Collections.sort(list);
                 System.out.print(list.get(i/2) + " ");
