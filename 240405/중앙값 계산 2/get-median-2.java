@@ -14,11 +14,11 @@ public class Main {
         String[] arr = br.readLine().split(" ");
         List<String> list = new ArrayList<>();
         
-        for(int i = 0; i < n; i++) {
+        for(int i = 1; i < n; i++) {
             list.add(arr[i]);
             if((i+1) % 2 == 1) {
                 Collections.sort(list);
-                System.out.print(list.get(i/2) + " ");
+                System.out.print(list.get(i-1) + " ");
             }
         }
     }
