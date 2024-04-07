@@ -17,11 +17,11 @@ class UserLevel {
         this.level = level;
     }
 
-    public getId() {
+    public String getId() {
         return id;
     }
 
-    public getLevel() {
+    public int getLevel() {
         return level;
     }
 }
