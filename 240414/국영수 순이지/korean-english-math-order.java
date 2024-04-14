@@ -32,13 +32,13 @@ class Student implements Comparable<Student>{
 
     @Override
     public int compareTo(Student student) {
-        if(this.korean == student.korean) {
-            if(this.english == student.english) {
-                return student.math - this.math;
-            }
+        if(this.korean != student.korean) {
+            return student.korean - this.korean;
+        }
+        if(this.english != student.english) {
             return student.english - this.english;
         }
-        return student.korean - this.korean;
+        return student.math - this.math;
     }
 }
 
