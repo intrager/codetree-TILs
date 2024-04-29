@@ -5,30 +5,22 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 class Point implements Comparable<Point> {
-    private int x;
-    private int y;
+    private int distance;
     private int index;
 
-    public Point(int x, int y, int index) {
-        this.x = x;
-        this.y = y;
+    public Point(int distance, int index) {
+        this.distance = distance;
         this.index = index;
     }
 
-    public int getX() {
-        return x;
-    }
-    public int getY() {
-        return y;
-    }
     public int getIndex() {
         return index;
     }
 
     @Override
     public int compareTo(Point point) {
-        if(Math.abs(this.x - point.x) != Math.abs(this.y - point.y))
-            return Math.abs(this.y - point.y) - Math.abs(this.x - point.x);
+        if(this.distance != point.distance)
+            return distance - point.distance;
         return this.index - point.index;
     }
 }
@@ -44,8 +36,8 @@ public class Main {
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
             int x = Integer.parseInt(st.nextToken());
             int y = Integer.parseInt(st.nextToken());
-
-            points[idx] = new Point(x, y, idx + 1);
+            int distance = getDistanceFromOrigin(x, y);
+            points[idx] = new Point(distance, idx + 1);
         }
 
         Arrays.sort(points);
@@ -53,5 +45,9 @@ public class Main {
         for(int i = 0; i < n; i++) {
             System.out.println(points[i].getIndex());
         }
+    }
+
+    private static int getDistanceFromOrigin(int x, int y) {
+        return Math.abs(x) + Math.abs(y);
     }
 }
