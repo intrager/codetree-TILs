@@ -18,17 +18,16 @@ public class Main {
         int sum1 = 0;
         int sum2 = 0;
 
-        for(int i = 1; i <= m1; i++) {
+        for(int i = 0; i < m1; i++) {
             sum1 += daysOfMonth[i];
         }
         sum1 += d1;
 
-        for(int i = 1; i <= m2; i++) {
+        for(int i = 0; i < m2; i++) {
             sum2 += daysOfMonth[i];
         }
         sum2 += d2;
 
-        if(sum2 == sum1) System.out.print(1); 
-        else System.out.print(sum2 - sum1);
+        System.out.print(sum2 - sum1 + 1);
     }
 }
