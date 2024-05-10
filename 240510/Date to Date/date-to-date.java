@@ -28,6 +28,7 @@ public class Main {
         }
         sum2 += d2;
 
-        System.out.print(sum2 - sum1);
+        if(sum2 == sum1) System.out.print(1); 
+        else System.out.print(sum2 - sum1);
     }
 }
