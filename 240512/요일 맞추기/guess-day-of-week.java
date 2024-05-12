@@ -34,7 +34,7 @@ public class Main {
         if(days2 > days1) {
             answer = (days2 - days1) % 7 + 1;
         } else if(days2 < days1) {
-            answer = (days1 - days2) % 7 - 1;
+            answer = (days1 - days2) % 6;
         } else {
             answer = (days2 - days1) % 7 + 1;
         }
