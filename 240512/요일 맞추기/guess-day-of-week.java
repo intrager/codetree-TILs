@@ -29,7 +29,15 @@ public class Main {
         }
         days2 += d2;
 
-        int answer = (days2 - days1) % 7 + 1;
+
+        int answer = 0;
+        if(days2 > days1) {
+            answer = (days2 - days1) % 7 + 1;
+        } else if(days2 < days1) {
+            answer = (days1 - days2) % 7 - 2;
+        } else {
+            answer = days1 % 7;
+        }
         System.out.print(week[answer]);
     }
 }
