@@ -36,7 +36,7 @@ public class Main {
         } else if(days2 < days1) {
             answer = (days1 - days2) % 7 - 2;
         } else {
-            answer = days1 % 7;
+            answer = (days2 - days1) % 7 + 1;
         }
         System.out.print(week[answer]);
     }
