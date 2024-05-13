@@ -36,7 +36,7 @@ public class Main {
         int answer = temp % 7;
         for(int i = 0; i < week.length; i++) {
             if(weekDay.equals(week[i]))
-                count = i + 1;
+                count = i;
         }
         if((temp % 7) >= count) answer++;
         System.out.print(answer);
