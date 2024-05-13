@@ -19,10 +19,7 @@ public class Main {
         String weekDay = br.readLine().trim();
 
         int count = 0;
-        for(int i = 0; i < week.length; i++) {
-            if(weekDay.equals(week[i]))
-                count = i;
-        }
+        
 
         int day1 = 0;
         int day2 = 0;
@@ -36,8 +33,13 @@ public class Main {
         }
         day2 += d2;
 
-        int answer = day2 - day1;
-        answer /= count;
-        System.out.print(answer - 1);
+        int temp = day2 - day1;
+        int answer = temp/7;
+        for(int i = 0; i < week.length; i++) {
+            if(weekDay.equals(week[i]))
+                count = i;
+        }
+        if(temp >= count) answer++;
+        System.out.print(answer);
     }
 }
