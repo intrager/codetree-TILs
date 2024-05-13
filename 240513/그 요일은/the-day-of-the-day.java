@@ -33,7 +33,7 @@ public class Main {
         }
         day2 += d2;
         int temp = day2 - day1;
-        int answer = temp % 7;
+        int answer = temp / 7;
         for(int i = 0; i < week.length; i++) {
             if(weekDay.equals(week[i]))
                 count = i;
