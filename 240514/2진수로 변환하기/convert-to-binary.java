@@ -7,7 +7,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
-        int[] digits = new int[n];
+        int[] digits = new int[20];
         int cnt = 0;
 
         while(true) {
