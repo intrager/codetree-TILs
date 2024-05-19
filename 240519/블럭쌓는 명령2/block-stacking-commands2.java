@@ -12,7 +12,7 @@ public class Main {
         int k = Integer.parseInt(st.nextToken());
 
         int[] arr = new int[n];
-        for(int i = 0; i < k; i++) {
+        while(br.ready()) {
             st = new StringTokenizer(br.readLine(), " ");
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
@@ -23,10 +23,12 @@ public class Main {
         }
 
         int answer = 0;
+        int count = 0;
 
         for(int i = 0; i < n; i++) {
-            if(answer < arr[i]) {
-                answer = arr[i];
+            if(count < arr[i]) {
+                count = arr[i];
+                answer = i;
             }
         }
         System.out.print(answer);
