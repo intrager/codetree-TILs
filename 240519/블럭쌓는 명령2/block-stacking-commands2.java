@@ -23,14 +23,12 @@ public class Main {
         }
 
         int answer = 0;
-        int count = 0;
 
         for(int i = 0; i < n; i++) {
-            if(count < arr[i]) {
-                count = arr[i];
-                answer = i;
+            if(answer < arr[i]) {
+                answer = arr[i];
             }
         }
-        System.out.print(count);
+        System.out.print(answer);
     }
 }
