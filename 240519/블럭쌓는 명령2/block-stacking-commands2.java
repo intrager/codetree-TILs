@@ -31,6 +31,6 @@ public class Main {
                 answer = i;
             }
         }
-        System.out.print(answer);
+        System.out.print(count);
     }
 }
